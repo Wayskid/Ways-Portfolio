@@ -97,7 +97,7 @@
 }
 
 .iconBackground>*:hover{
-   color: var(--clr-primary-200--);
+   color: var(--clr-primary-500--);
    transition: 0.8s ease;
    opacity: 0.7;
 }
