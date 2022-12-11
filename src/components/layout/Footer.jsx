@@ -10,21 +10,21 @@ export default function Footer() {
          <div className="socials">
             <a
                href="https://github.com/Wayskid"
-               className="backWrapper"
+               className="footerIconWrapper"
                target="_blank"
             >
                <FiGithub />
             </a>
             <a
                href="https://linkedin.com/in/alabi-irinyemi-8a75a6190"
-               className="backWrapper"
+               className="footerIconWrapper"
                target="_blank"
             >
                <GrLinkedinOption />
             </a>
             <a 
                href="https://twitter.com/irinyemialabi" 
-               className="backWrapper" 
+               className="footerIconWrapper" 
                target="_blank"
             >
                <FiTwitter />

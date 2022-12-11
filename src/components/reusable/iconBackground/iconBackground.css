@@ -1,0 +1,103 @@
+
+/*==========IconBackground==========*/
+
+.iconBackground{
+   position: relative;
+   width: 100%;
+   top: 0rem;
+   justify-self: center;
+}
+
+.iconBackground>*{
+   font-size: 25px;
+   font-weight: 900;
+   color: white;
+   opacity: 0.07;
+   position: absolute;
+}
+
+.iconBackground>:nth-child(2){
+   top: 11%;
+   right: 5%;
+}
+
+.iconBackground>:nth-child(7){
+   top: 40%;
+   right: 11%;
+}
+
+.iconBackground>:nth-child(8){
+   top: 31%;
+   right: 29%;
+}
+
+.iconBackground>:nth-child(9){
+   top: 60%;
+   right: 30%;
+}
+
+.iconBackground>:nth-child(3){
+   top: 90%;
+   right: 45%;
+}
+
+.iconBackground>:nth-child(10){
+   top: 60%;
+   right: 46%;
+}
+
+.iconBackground>:nth-child(16){
+   top: 85%;
+   right: 21%;
+}
+
+.iconBackground>:nth-child(13){
+   top: 40%;
+   right: 40%;
+}
+
+.iconBackground>:nth-child(1){
+   top: 11%;
+   left: 5%;
+}
+
+.iconBackground>:nth-child(4){
+   top: 40%;
+   left: 11%;
+}
+
+.iconBackground>:nth-child(6){
+   top: 31%;
+   left: 29%;
+}
+
+.iconBackground>:nth-child(11){
+   top: 60%;
+   left: 30%;
+}
+
+.iconBackground>:nth-child(5){
+   top: 90%;
+   left: 45%;
+}
+
+.iconBackground>:nth-child(12){
+   top: 60%;
+   left: 46%;
+}
+
+.iconBackground>:nth-child(14){
+   top: 85%;
+   left: 21%;
+}
+
+.iconBackground>:nth-child(15){
+   top: 40%;
+   left: 40%;
+}
+
+.iconBackground>*:hover{
+   color: var(--clr-primary-200--);
+   transition: 0.8s ease;
+   opacity: 0.7;
+}

@@ -85,7 +85,7 @@ button{
    border-color: transparent;
 }
 
-/* Body */
+/*==========Body==========*/
 
 body{
    font-family: 'Saira', sans-serif;
@@ -106,7 +106,7 @@ body{
    display: flex;
    gap: 3rem;
    padding: 0.8rem 4rem 0 4rem;
-   z-index: 999;
+   z-index: 33;
    justify-content: center;
 }
 
@@ -122,6 +122,10 @@ body{
    font-size: 18px;
 }
 
+.nav a:hover{
+   color: var(--clr-primary-500--);
+}
+
 .navBorder{
    height: 4px;
    width: 100%;
@@ -133,13 +137,26 @@ body{
 /*==========HOME==========*/
 #home{
    display: grid;
-   background-color: var(--clr-primary-800--);
+   grid-template-areas: "stack";
+}
+
+#home>*{
+   grid-area: stack;
    height: 100vh;
+}
+ 
+.homeIntro{
+   display: grid;
+   background-color: var(--clr-primary-800--);
    align-content: center;
    text-align: center;
    gap: 0.7rem;
    justify-content: center;
    font-size: larger;
+}
+
+.homeIntro>*{
+   z-index: 22;
 }
 
 
@@ -151,7 +168,22 @@ body{
    font-size: 16px;
 }
 
-.introBtns>*>*:last-child{
+.homeDownloadBtn{
+   padding-inline: 1.5rem;
+   color: var(--clr-primary-200--);
+   border-radius: 3px;
+   cursor: pointer;
+   border: 1px solid var(--clr-primary-400--);
+}
+
+.homeDownloadBtn:hover{
+   background-color: var(--clr-primary-500--);
+   color: var(--clr-primary-200--);
+   transition: all 0.4s ease;
+   border-color: transparent;
+}
+
+.introBtns>*>*:last-child, .homeDownloadBtn{
    display: flex;
    align-items: center;
    gap: 0.5rem;
@@ -228,7 +260,7 @@ body{
 
 .showSecHeaderAfter::after{
    translate: 0;
-   transition: 1.5s ease;
+   transition: 1s ease;
 }
 
 .aboutFlex{
@@ -263,7 +295,7 @@ body{
    width: 18rem;
    background-color: var(--clr-primary-400--);
    padding: 1rem 3rem 0 3rem;
-   z-index: 2;
+   z-index: 11;
    rotate: 8deg;
    transition: rotate 0.3s ease;
 }
@@ -320,12 +352,12 @@ body{
 
 .skills{
    display: grid;
-   margin-top: 5rem;
+   margin-top: 4rem;
    color: var(--clr-primary-800--);
    text-align: center;
    position: relative;
    gap: 0.1rem;
-   padding-inline: 4rem;
+   padding-inline: 2rem;
    opacity: 0;
 }
 
@@ -384,7 +416,7 @@ body{
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    gap: 2rem;
    justify-items: center;
-   padding: 3rem 8rem;
+   padding: 3rem 4rem;
    border-radius: 20px;
 }
 
@@ -401,7 +433,7 @@ body{
 }
 
 .projectCard img{
-   width: 400px;
+   width: 380px;
    height: 15rem;
    max-width: 100%;
    border-radius: 10px;
@@ -454,6 +486,75 @@ body{
 
 .projectCard button{
    color: var(--clr-primary-600--);
+}
+
+/*==========Project Popup==========*/
+#projectPopup, .overlay{
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   color: var(--clr-primary-800--);
+   height: 100%;
+   width: 100%;
+   z-index: 66;
+   display: grid;
+   justify-items: center;
+   align-items: center;
+}
+
+.overlay{
+   background-color: #00000079;
+}
+
+.projectPopupDet{
+   width: min(750px, 90%);
+   background-color: var(--clr-primary-200--);
+   padding-bottom: 1rem;
+   z-index: 77;
+}
+
+.slide div{
+   height: 400px;
+}
+
+.slide img{
+   height: 100%;
+}
+
+.projectDetails{
+   padding: 0rem 5rem 1rem 2rem;
+   display: grid;
+   gap: 0.5rem;
+}
+
+.bottomDet{
+   display: grid;
+   gap: 1rem;
+}
+
+.detBtns{
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   padding-inline: 2rem 1rem;
+}
+
+.detBtns>:last-child{
+   margin-left: auto;
+   background: none;
+   padding: 0;
+   border: none;
+   color: var(--clr-primary-800--);
+}
+
+.detBtns>:last-child:hover{
+   color: red;
+}
+
+.detBtns .noBackgroundBtn{
+   color: var(--clr-primary-800--);
 }
 
 /*==========CONTACT==========*/
@@ -534,21 +635,23 @@ footer img{
   gap: 4rem;
 }
 
-.backWrapper{
+.footerIconWrapper{
   padding: 0.6rem 0.7rem;
   background-color: var(--clr-primary-400--);
   color: var(--clr-primary-200--);
   display: grid;
   align-items: center;
   font-size: 25px;
+  overflow: hidden;
 }
 
-.backWrapper:hover{
+.footerIconWrapper:hover{
    background-color: var(--clr-primary-500--);
+   scale: 1.15;
    transition: 0.5s ease;
 }
 
-.backWrapper:hover.backWrapper>*{
+.footerIconWrapper:hover.footerIconWrapper>*{
    animation: turn 0.5s;
 }
 
@@ -557,11 +660,9 @@ footer img{
       translate: 0rem 0rem;
    }
    44%{
-      color: var(--clr-primary-800--);
    }
    50%{
       translate: 0rem 2rem;
-      color: var(--clr-primary-800--);
    }
    60%{
       translate: 0rem -2rem;
@@ -587,6 +688,10 @@ footer span{
 
    .skills{
       display: flex;
+   }
+
+   .projectsGrid{
+      padding: 3rem 8rem;
    }
 }
 

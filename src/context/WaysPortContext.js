@@ -8,6 +8,30 @@ export function WaysPortfolioProvider({ children }) {
    //Nav Active Status
    const [activeNav, setActiveNav] = useState("");
 
+   //Active Project
+   const [activeProject, setActiveProject] = useState();
+
+   function getActiveProject(projectClicked){
+      setActiveProject(projectClicked)
+   }
+
+   //Show Project Details
+   const [ projectDetShown, setProjectDetShown ] = useState(false)
+
+   function handleProjectDetShown(projectClicked){
+      getActiveProject(projectClicked)
+      setProjectDetShown(!projectDetShown)
+   }
+
+   //Disable Scrolling on Popup
+   useEffect(()=>{
+      if (projectDetShown) {
+         document.querySelector("body").style.overflow = "hidden"
+      }else{
+         document.querySelector("body").style.overflow = "auto"
+      }
+   },[projectDetShown])
+
    //Intersection Observer
    const [homeRef, homeInView] = useInView({
       threshold: 0.3
@@ -55,6 +79,9 @@ export function WaysPortfolioProvider({ children }) {
       <WaysPortfolioContext.Provider value={{
          setActiveNav,
          activeNav,
+         activeProject,
+         handleProjectDetShown,
+         projectDetShown,
          homeRef,
          aboutRef,
          aboutInView,

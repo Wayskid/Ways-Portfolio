@@ -3,7 +3,7 @@ import WaysPortfolioContext from "../../context/WaysPortContext"
 
 export default function Button({version, children, link, target}) {
 
-  const {activeNav, setActiveNav} = useContext(WaysPortfolioContext)
+  const {setActiveNav} = useContext(WaysPortfolioContext)
 
   return (
     <a href={link}  target={target} 
