@@ -55,6 +55,10 @@ export default function About() {
                      <p>Experienced</p>
                   </li>
                   <li>
+                     <h3>TailWind CSS</h3>
+                     <p>Experienced</p>
+                  </li>
+                  <li>
                      <h3>JavaScript</h3>
                      <p>Intermediate</p>
                   </li>
