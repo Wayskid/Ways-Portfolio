@@ -326,7 +326,7 @@ body{
    display: grid;
    gap: 2rem;
    text-align: center;
-   translate: 100vw 0;
+   translate: 110% 0;
 }
 
 .showAboutDetails{
