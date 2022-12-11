@@ -266,7 +266,7 @@ body{
 .aboutFlex{
    display: grid;
    align-items: center;
-   padding: 3rem 4rem;
+   padding: 3rem 2rem;
    gap: 2rem;
    position: relative;
    overflow: hidden;
@@ -516,7 +516,7 @@ body{
 }
 
 .slide div{
-   height: 400px;
+   height: 330px;
 }
 
 .slide img{

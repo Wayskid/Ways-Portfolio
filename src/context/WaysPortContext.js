@@ -38,7 +38,7 @@ export function WaysPortfolioProvider({ children }) {
    })
 
    const [aboutRef, aboutInView] = useInView({
-      threshold: 0.3,
+      threshold: 0.2,
    })
 
    const [aboutDetails, aboutDetailsInView] = useInView({
