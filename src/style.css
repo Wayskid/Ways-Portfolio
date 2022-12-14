@@ -395,7 +395,7 @@ body{
 
 .skillsGrid{
    display: grid;
-   grid-template-rows: repeat(5, 1fr);
+   grid-template-rows: repeat(6, 1fr);
    gap: 1.5rem;
 }
 

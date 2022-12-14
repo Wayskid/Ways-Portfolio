@@ -66,6 +66,10 @@ export default function About() {
                      <h3>React</h3>
                      <p>Intermediate</p>
                   </li>
+                  <li>
+                     <h3>SQL</h3>
+                     <p>Intermediate</p>
+                  </li>
                </ul>
             </div>
             <div className="skill designer">
